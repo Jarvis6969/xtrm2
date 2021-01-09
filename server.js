@@ -1,4 +1,4 @@
-const { default_prefix } = require("./config.json");
+const { token, default_prefix } = require("./config.json")
 const { badwords } = require("./data.json");
 const { config } = require("dotenv");
 const { attachment } = require("discord.js");
@@ -105,4 +105,4 @@ client.on("message", async message => {
     if (command) command.run(client, message, args);
 });
 
-client.login(process.env.TOKEN);
+client.login(token);
